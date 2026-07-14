@@ -1,7 +1,7 @@
 # Homebrew formula template for the Stella CLI.
 #
 # This is NOT a hand-maintained formula — the `release` workflow renders it on
-# every tag push by substituting the 0.1.17 / @SHA_*@ placeholders below with
+# every tag push by substituting the 0.2.0 / @SHA_*@ placeholders below with
 # the real version and per-target SHA-256 sums of the prebuilt tarballs, then
 # commits the result to the tap repo (oxageninc/homebrew-stella) as
 # Formula/stella.rb. See .github/workflows/release.yml (the `homebrew` job).
@@ -11,28 +11,30 @@
 class Stella < Formula
   desc "Fast, BYOK, model-agnostic terminal coding agent"
   homepage "https://github.com/oxageninc/stella"
-  version "0.1.17"
-  license "MIT OR Apache-2.0"
+  # Explicit version is kept intentionally: brew's URL version-scan is fragile
+  # for filenames containing arch tokens (x86_64/aarch64), so we pin it.
+  version "0.2.0"
+  license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/oxageninc/stella/releases/download/v0.1.17/stella-0.1.17-aarch64-apple-darwin.tar.gz"
-      sha256 "ed5e225187ac961843d46cddb16a590a5a35c84303267c66cd98c7a47abf1284"
+      url "https://github.com/oxageninc/stella/releases/download/v0.2.0/stella-0.2.0-aarch64-apple-darwin.tar.gz"
+      sha256 "91e7c22accc66b43526bddbe821c2a73340cc3ba144c2ce16142aa1460486bb9"
     end
     on_intel do
-      url "https://github.com/oxageninc/stella/releases/download/v0.1.17/stella-0.1.17-x86_64-apple-darwin.tar.gz"
-      sha256 "53a8e86c735b04793d99d60557cbb2c2e5783b0e53869ec86b5f211eb4fc9b21"
+      url "https://github.com/oxageninc/stella/releases/download/v0.2.0/stella-0.2.0-x86_64-apple-darwin.tar.gz"
+      sha256 "bb2aa769806f6906d0d23f69570b7735c654422e15b8828650c67f655c118340"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/oxageninc/stella/releases/download/v0.1.17/stella-0.1.17-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "27a532253d16c32df012d17a3e5e30e031b7f4fe4ac4cf78885c4b8cf1de11e1"
+      url "https://github.com/oxageninc/stella/releases/download/v0.2.0/stella-0.2.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c51b60e6ec98794b2c247e0ff1636463a40c87f727e45c18208519c26104d4f5"
     end
     on_intel do
-      url "https://github.com/oxageninc/stella/releases/download/v0.1.17/stella-0.1.17-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3807af313e2e8159443374d5ace20cff0d16d92a7db10442b5fd5fdd99190b8c"
+      url "https://github.com/oxageninc/stella/releases/download/v0.2.0/stella-0.2.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "664bb43442a0bbc9b5a106a8039ec6275c1acddb44e95264707b9461f5b86fc7"
     end
   end
 
