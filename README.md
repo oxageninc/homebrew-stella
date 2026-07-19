@@ -6,8 +6,8 @@ fast, BYOK, model-agnostic terminal coding agent.
 ## Install
 
 ```bash
-brew install oxageninc/stella/stella
-# equivalently: brew tap oxageninc/stella && brew install stella
+brew install macanderson/tap/stella
+# equivalently: brew tap macanderson/stella && brew install stella
 ```
 
 Upgrade with `brew upgrade stella`.
