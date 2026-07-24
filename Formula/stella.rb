@@ -1,7 +1,7 @@
 # Homebrew formula template for the Stella CLI.
 #
 # This is NOT a hand-maintained formula — the `release` workflow renders it on
-# every tag push by substituting the 0.5.3 / @SHA_*@ placeholders below with
+# every tag push by substituting the 0.5.4 / @SHA_*@ placeholders below with
 # the real version and per-target SHA-256 sums of the prebuilt tarballs, then
 # commits the result to the tap repo (macanderson/homebrew-tap) as
 # Formula/stella.rb. See .github/workflows/release.yml (the `homebrew` job).
@@ -13,28 +13,28 @@ class Stella < Formula
   homepage "https://github.com/macanderson/stella"
   # Explicit version is kept intentionally: brew's URL version-scan is fragile
   # for filenames containing arch tokens (x86_64/aarch64), so we pin it.
-  version "0.5.3"
+  version "0.5.4"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/macanderson/stella/releases/download/v0.5.3/stella-0.5.3-aarch64-apple-darwin.tar.gz"
-      sha256 "f692b3cdef4195b0aff487a1814775da6c101d1d97bc516788fdd0595f4f0c18"
+      url "https://github.com/macanderson/stella/releases/download/v0.5.4/stella-0.5.4-aarch64-apple-darwin.tar.gz"
+      sha256 "fd3f911e06a30a0e15436ab40a689da850f6687f2c57c1abc42e66e9f1d3fbac"
     end
     on_intel do
-      url "https://github.com/macanderson/stella/releases/download/v0.5.3/stella-0.5.3-x86_64-apple-darwin.tar.gz"
-      sha256 "af2abd7d4f50153b4bb17bc33bedc30ae575faab3151a9a1d9572cf471fb1f8e"
+      url "https://github.com/macanderson/stella/releases/download/v0.5.4/stella-0.5.4-x86_64-apple-darwin.tar.gz"
+      sha256 "48db701b536b605f73eb37a56500891af06ba54b3076ed16a3e33da09d629975"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/macanderson/stella/releases/download/v0.5.3/stella-0.5.3-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "1b9ab292952958f2826984e56e290139d000d8628d3e1c5e63b7d67dae40536a"
+      url "https://github.com/macanderson/stella/releases/download/v0.5.4/stella-0.5.4-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "e5f1a62d262e125f37828355d8268f22319bbfe94e563ae26c6a03fd213a4946"
     end
     on_intel do
-      url "https://github.com/macanderson/stella/releases/download/v0.5.3/stella-0.5.3-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6bb3be0b912ba55c9f963b300b7ccdda76955b02ce3cfdb9bc175ba6e933cbc9"
+      url "https://github.com/macanderson/stella/releases/download/v0.5.4/stella-0.5.4-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a14c89a7c02070fb1ff301ffc3980591a72d15b749ecf607cdb39724a634fcc4"
     end
   end
 
